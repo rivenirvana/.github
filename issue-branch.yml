@@ -1,0 +1,14 @@
+mode: auto
+branchName: full
+silent: false
+autoCloseIssue: true
+branches:
+  - label: enhancement
+    prefix: feature/
+    name: dev
+  - label: bug
+    prefix: bugfix/
+    name: staging
+  - label: '*'
+    prefix: issues/
+    name: dev
