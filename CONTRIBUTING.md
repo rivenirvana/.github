@@ -1,4 +1,4 @@
-# Contributing to this project
+# Contributing to this Project
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
@@ -8,21 +8,19 @@ the developers managing and developing this open source project. In return,
 they should reciprocate that respect in addressing your issue or assessing
 patches and features.
 
-
-## Using the issue tracker
+## Using the Issue Tracker
 
 The issue tracker is the preferred channel for [bug reports](#bug-reports),
 [features requests](#feature-requests) and [submitting pull
 requests](#pull-requests), but please respect the following restrictions:
 
-* Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com) or IRC).
+* Please **DO NOT** use the issue tracker for personal support requests (use
+  [Stack Overflow](http://stackoverflow.com/) or [IRC](https://freenode.net/)).
 
-* Please **do not** derail or troll issues. Keep the discussion on topic and
+* Please **DO NOT** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
 
-
-## Bug reports
+## Bug Reports
 
 A bug is a _demonstrable problem_ that is caused by the code in the repository.
 Good bug reports are extremely helpful - thank you!
@@ -46,28 +44,27 @@ details will help people to fix any potential bugs.
 
 Example:
 
-```
+```markdown
 The `paper-foo` element causes the page to turn pink when clicked.
 
-## Expected outcome
+## Expected Outcome
 
 The page stays the same color.
 
-## Actual outcome
+## Actual Outcome
 
 The page turns pink.
 
-## Steps to reproduce
+## Steps to Reproduce
 
 1. Put a `paper-foo` element in the page.
 2. Open the page in a web browser.
 3. Click the `paper-foo` element.
 ```
 
-If it is possible, **please provide a reduced test case that demonstrates the problem**.
+As much as possible, **please provide a reduced test case that demonstrates the problem**.
 
-
-## Feature requests
+## Feature Requests
 
 Feature requests are welcome. But take a moment to find out whether your idea
 fits with the scope and aims of the project. It's up to *you* to make a strong
@@ -80,8 +77,7 @@ If you still want to file an issue to request a feature, please provide a clear 
 2. When will they use the feature? *“When I enter an invalid value…”*
 3. What is the user’s goal? *“I want to be visually notified that the value needs to be corrected…”*
 
-
-## Pull requests
+## Pull Requests
 
 Good pull requests - patches, improvements, new features - are a fantastic
 help. They should remain focused in scope and avoid containing unrelated
@@ -98,18 +94,20 @@ accurate comments, etc.) and any other requirements (such as test coverage).
 When submitting pull requests, please provide:
 
 1. **A reference to the corresponding issue** or issues that will be closed by the pull request. Please refer to these issues in the pull request description using the following syntax:
-```
-(For a single issue)
-Fixes #20
 
-(For multiple issues)
-Fixes #32, fixes #40
-```
+   ```markdown
+   (For a single issue)
+   Fixes #20
+
+   (For multiple issues)
+   Fixes #32, fixes #40
+   ```
 
 2. **A succinct description of the design** used to fix any related issues. For example:
-```
-This fixes #20 by removing styles that leaked which would cause the page to turn pink whenever `paper-foo` is clicked.
-```
+
+   ```markdown
+   This fixes #20 by removing styles that leaked which would cause the page to turn pink whenever `paper-foo` is clicked.
+   ```
 
 3. **At least one test for each bug fixed or feature added as part of the pull request.** We will still consider approving your pull request but if you can add a test, please add them :)
 
@@ -162,7 +160,7 @@ To contribute your work:
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
     with a clear title and description.
 
-## Contributing Rules (for Frontend)
+## Contributing Rules (Frontend)
 
 Adding an additional npm package without a clear detail on why it should be added
 and the byte impact it would add will be disapproved immediately.
@@ -172,63 +170,63 @@ but I am focusing on making this a performant module. Adding packages at whim is
 an anti-pattern and I discourage the use of extra libraries without a clear
 reason WHY it should be part of this module.
 
-## Conventions of commit messages
+## Conventional Commit Messages
 
-We follow the convention written at https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines when writing commits.
+Contributors **MUST** follow the git commit conventions proposed by the [Angular team](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) when writing commits.
 
-Here is an example of the release type that will be done based on a commit messages (from https://github.com/semantic-release/semantic-release):
+Here is an example of the release type that will be done based on commit messages (from [semantic-release](https://github.com/semantic-release/semantic-release)):
 
-| Commit message                                                                                                                                                                                   | Release type               |
+| Commit Message                                                                                                                                                                                   | Release Type               |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | `fix(pencil): stop graphite breaking when too much pressure applied`                                                                                                                             | Patch Release              |
-| `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | ~~Minor~~ Feature Release  |
-| `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~Major~~ Breaking Release |
+| `feat(pencil): add 'graphiteWidth' option`                                                                                                                                                       | ~~MINOR~~ Feature Release  |
+| `perf(pencil): remove graphiteWidth option`<br><br>`BREAKING CHANGE: The graphiteWidth option has been removed.`<br>`The default graphite width of 10mm is always used for performance reasons.` | ~~MAJOR~~ Breaking Release |
 
-To help us, we have Commitizen. We do this by doing this steps: Stage files then Commit using Commitizen
+To assist contributors, Commitizen will be used. This is done by following these steps:
 
-### Staging
+### Stage
 
 Pick files to be staged using the side bar Source Control view
 
 ### Commit
 
 Commit either using the Commitizen Control Panel via the Command Pallete (shift + command + P) and then answer the following information.
-Or run `npm run commit` on your vagrant machine.
+Or run `npm run commit` on your Vagrant machine.
 
-To help you answer, see the following rules
+The following rules will guide contributors to answer the questions:
 
 #### Type
 
-Must be one of the following:
+**MUST** be one of the following:
 
-- feat: A new feature
-- fix: A bug fix
-- docs: Documentation only changes
-- style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- refactor: A code change that neither fixes a bug nor adds a feature
-- perf: A code change that improves performance
-- test: Adding missing or correcting existing tests
-- chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+* `feat`: A new feature
+* `fix`: A bug fix
+* `docs`: Documentation only changes
+* `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+* `refactor`: A code change that neither fixes a bug nor adds a feature
+* `perf`: A code change that improves performance
+* `test`: Adding missing or correcting existing tests
+* `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
 #### Scope (Optional)
 
 The scope could be anything specifying place of the commit change. For example a filename, or component name, or page name, etc...
 
-You can use * when the change affects more than a single scope.
+You can use an asterisk (*) when the change affects more than a single scope.
 
 #### Body
 
-The body of commit has two parts: the action, and the description. It should in imperative tense form
+The body of commit has two parts: the action, and the description. It should be in the imperative tense.
 
 ##### Action
 
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- don't capitalize first letter
+* use the imperative, present tense: "change", not "changed" nor "changes"
+* do not capitalize first letter
 
 ##### Description
 
-- should complete the sentence started by the action
-- no dot (.) at the end
+* should complete the sentence started by the action
+* no dot (.) at the end
 
 #### Longer Description (Footer - Optional)
 
@@ -239,4 +237,5 @@ Commitizen will help in adding Breaking Changes or if it is connected to an issu
 
 ### Push
 
-Push when ready.
+Commits will be merged and pushed to the default release or base branch (often `master`) after review once any CI checks and workflows have passed and a stable build is ensured.
+Releases and version tags will be made as necessary.
