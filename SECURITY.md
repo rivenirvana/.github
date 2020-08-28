@@ -2,20 +2,9 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+ **Critical security vulnerabilities will be ported as far back as possible.**
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+Please report security vulnerabilities directly to the maintainers or to the project owner by sending an email to [acverain@up.edu.ph](mailto:acverain@up.edu.ph).
+You can also report vulnerabilities to the [NPM and Github security teams](https://docs.npmjs.com/reporting-a-vulnerability-in-an-npm-package) for NPM packages.
